@@ -13,6 +13,12 @@ The recommended way to start coding on this project is to use:
 - direnv
 - VSCode, and download the `clangd` extension
 
+```sh
+git clone https://github.com/walicar/wlru
+code wlru
+direnv allow
+```
+
 ## Build and Run Project
 ```sh
 npm i
