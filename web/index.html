@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>LRU</title>
+    <link rel="shortcut icon" type="image/svg+xml" href="/icon.svg?"/>
+    <style>
+      input {
+        width: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>LRU Cache</h1>
+    <p>Interact with an LRU Cache written in CXX ported to JS</p>
+    <div>
+      <p id="printDisplay">NA</p>
+      <input type="text" id="putKey" placeholder="Put a key: int">
+      <input type="text" id="putValue" placeholder="Put a value: int">
+      <button onclick="put()">Put</button>
+      <br>
+      <input type="text" id="getKey" placeholder="Get key: int">
+      <button onclick="get()">Get</button>
+    </div>
+    <script async src="assets/out.js"></script>
+    <script async type='text/javascript'>
+      var Module = {
+        onRuntimeInitialized: function() {
+          window.lru = new Module.LRU(10);
+          update();
+      }
+    };
+    </script>
+    <script type='text/javascript'>
+      function update() {
+        var result = "NA"
+        if (window.lru) {
+          result = window.lru.print();
+        }
+        document.getElementById("printDisplay").textContent = result;
+      }
+
+      function put(key, value) {
+        if (window.lru) {
+          const key = document.getElementById("putKey").value;
+          const value = document.getElementById("putValue").value;
+          window.lru.put(parseInt(key), parseInt(value));
+          update();
+        }
+      };
+
+      function get() {
+      if (window.lru) {
+          const key = document.getElementById("getKey").value;
+          window.lru.get(parseInt(key));
+          update();
+      };
+    }
+    </script>
+  </body>
+</html>

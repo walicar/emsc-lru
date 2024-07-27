@@ -1,0 +1,6 @@
+node_modules/
+web/assets/out*
+.vscode
+.direnv
+.cache
+.clangd

@@ -1,0 +1,14 @@
+{
+  "name": "wlru",
+  "version": "1.0.0",
+  "type" : "module",
+  "scripts": {
+    "dev": "nodemon test/local.js"
+  },
+  "author": "Will Alicar",
+  "license": "MIT",
+  "devDependencies": {
+    "express": "^4.18.2",
+    "nodemon": "^3.0.3"
+  }
+}
