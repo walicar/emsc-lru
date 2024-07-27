@@ -16,8 +16,8 @@
         ];
         shellHook = ''
           export SRC=$(pwd)
-          bash setup_clangd.sh
-          bash setup_vscode.sh
+          bash scripts/setup_clangd.sh
+          bash scripts/setup_vscode.sh
         '';
       };
     }
