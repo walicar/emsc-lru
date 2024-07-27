@@ -6,6 +6,7 @@
     <style>
       input {
         width: 100px;
+        margin: 5px;
       }
     </style>
   </head>
@@ -14,11 +15,14 @@
     <p>Interact with an LRU Cache written in CXX ported to JS</p>
     <div>
       <p id="printDisplay">NA</p>
-      <input type="text" id="putKey" placeholder="Put a key: int">
-      <input type="text" id="putValue" placeholder="Put a value: int">
+      <label for="putKey">Key</label>
+      <input type="text" id="putKey" placeholder="int">
+      <label for="putKey">Value</label>
+      <input type="text" id="putValue" placeholder="int">
       <button onclick="put()">Put</button>
       <br>
-      <input type="text" id="getKey" placeholder="Get key: int">
+      <label for="getKey">Key</label>
+      <input type="text" id="getKey" placeholder="int">
       <button onclick="get()">Get</button>
     </div>
     <script async src="assets/out.js"></script>
