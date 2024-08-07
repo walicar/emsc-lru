@@ -7,12 +7,7 @@ var dir = path.join(import.meta.dirname, "..");
 
 app.use(
   "/assets",
-  express.static(path.join(dir, "web/assets"), {
-    setHeaders: (res, _) => {
-      res.setHeader("Cross-Origin-Embedder-Policy", "require-corp")
-    }
-    ,
-  })
+  express.static(path.join(dir, "web/assets"))
 );
 
 app.get("/", (req, res) => {
