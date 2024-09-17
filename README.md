@@ -1,4 +1,4 @@
-# Wasm LRU
+# emsc-lru
 An LRU object written in CXX that can be used via JS
 
 ## Overview
@@ -14,7 +14,7 @@ The recommended way to start coding on this project is to use:
 - VSCode, and download the `clangd` extension
 
 ```sh
-git clone https://github.com/walicar/wlru
+git clone https://github.com/walicar/emsc-lru
 code wlru
 direnv allow
 ```

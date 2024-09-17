@@ -81,7 +81,7 @@ private:
     }
 };
 
-EMSCRIPTEN_BINDINGS(class_lru) {
+EMSCRIPTEN_BINDINGS(emsc_lru) {
     emscripten::class_<LRU>("LRU")
         .constructor<int>()
         .function("get", &LRU::get, emscripten::allow_raw_pointers())
